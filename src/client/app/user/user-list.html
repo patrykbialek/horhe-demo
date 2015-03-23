@@ -1,0 +1,19 @@
+<section class="container">
+    <h1>{{vm.title}}</h1>
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <th>Login</th>
+                <th>First name</th>
+                <th>Last name</th>
+            </thead>
+            <tbody ng-repeat="u in vm.users">
+                <tr ng-click="vm.goToUser(u)">
+                    <td>{{u.loginName}}</td>
+                    <td>{{u.firstName}}</td>
+                    <td>{{u.lastName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

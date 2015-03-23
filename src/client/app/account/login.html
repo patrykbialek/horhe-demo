@@ -1,0 +1,17 @@
+
+<section class="container">
+    <form name="loginForm" ng-submit="vm.login()">
+        <span class="alert alert-danger" ng-if="vm.loginError.length">
+            {{vm.loginError}}
+        </span>
+        <div class="form-group">
+            <input class="form-control" type="email" ng-model="vm.user.loginName" required=""/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" ng-model="vm.user.password" required=""/>
+        </div>
+        <input type="submit" class="btn btn-primary"
+           ng-click="vm.login()"
+            ng-disabled="loginForm.$invalid" value="Login" />
+    </form>
+</section>
